@@ -11,13 +11,12 @@
     <body>
         <h1>Blog Name</h1>
         <p class = 'created'><a href=/posts/create>create</a></p>
-        
+       
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
                     <h2 class='title'>
                         <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-                        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
                     </h2>
                      <a href="">{{ $post->category->name }}</a>
                     <p class='body'>{{ $post->body }}</p>
